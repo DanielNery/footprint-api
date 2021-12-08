@@ -19,6 +19,8 @@ class FootprintWebSocket():
 
 
     def run_websocket(self):
+        """Funções do websocket e servidor websocket
+        """
         io = SocketIO(self.app, cors_allowed_origins='*')
         
         @io.on('getData')
@@ -40,7 +42,7 @@ class FootprintWebSocket():
 
 
 
-        io.run(self.app, debug=True)
+        return io.run(self.app, debug=True)
 
 
 
